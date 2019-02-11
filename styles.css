@@ -243,13 +243,14 @@ article.product-main .all-btn{
 }
 .about-us.feedback header{
     margin: 90px 0 0 0;
+    flex-grow: 0.8;
 }
 .about-us.feedback h1{
     margin: 0;
 }
 .about-us.feedback button{
-    width: 170px;
-    margin: 15px 5px 0 0;
+    width: 175px;
+    margin: 19px -5px 0 0;
 }
 .about-us.feedback{
     background-image: url("img/feedback.png");
@@ -257,15 +258,97 @@ article.product-main .all-btn{
     background-position: 0% 35%;
     margin: 15px 5px 0 0;
 }
-.arrow{
-    width: 85px;
+.about-us.feedback .arrow{
+    width: 90px;
     height: 55px;
     border: 0;
     background-repeat: no-repeat;
+    background-position: 50% -2%;
+    background-color: white;
 }
 .arrow.left{
     background-image: url("img/arrow-left.png")
 }
 .arrow.right{
     background-image: url("img/arrow-right.png")
+}
+.about-us.feedback footer{
+    flex-grow: 2.5;
+    margin: 0 0 0 5px;
+}
+.about-us.feedback main{
+    flex-grow: 0.6;
+    margin: 0 0 0 5px;
+}
+.contacts{
+    flex-basis: 670px;
+    align-items: flex-start;
+
+}
+.map{
+    width: 525px;
+    margin: 70px 0 0 0;
+}
+.contact-values{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 80px 0 0 50px;
+    height: 445px;
+}
+.contact-values button{
+    width: 230px;
+    flex-grow: 0;
+    margin: 0 5px;
+}
+.map-pin{
+    position: absolute;
+    left: 1070px;
+    top: 3065;
+}
+.flag{
+    margin: 130px 0 0 65px;
+}
+.contact-values table{
+    flex-grow: 10;
+}
+.contact-values h1{
+    flex-grow: 0;
+    margin: 53px 0 0 0;
+}
+.contact-values .col1{
+    width: 80px;
+}
+.contact-values a{    
+    font-size: 17px;
+    color: #5c5252;
+    margin: 0;
+    line-height: 1.8;
+}
+.footer{
+    height: 60px;
+    margin: 10px 0 0 0;
+}
+.footer .logo{
+    flex-grow: 2;
+    height: 100%;
+}
+.footer .ig{
+    flex-grow: 0.25;
+}
+.footer .fb{
+    flex-grow: 0.25;
+}
+.footer .tw{
+    flex-grow: 1.8;
+}
+.footer .by{
+    flex-grow: 0;
+    display: flex;
+    font-size: 19px;
+    font-weight: bold;
+    width: 185px;
+    justify-content: space-between;
 }
