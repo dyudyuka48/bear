@@ -1,43 +1,59 @@
 <!DOCTYPE html>
+<html lang="ru">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Мишка главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts/opensans.css"/>
+    <link rel="stylesheet" media="screen" href="styles.css">
+    <link rel="stylesheet" media="screen" href="fonts/opensans.css">
 </head>
+
 <body>
-    <main>
-        <nav class="top-menu">
-            <div class="link top katalog text"><a href="">Каталог товаров</a></div>
-            <div class="link top order text"><a href="">Вязание на заказ</a></div>
-            <div class="link top logo"><a href=""><img class="logo" src="img/mishka-logo.png" alt="Главная"></a></div>
-            <div class="link top search"><a href=""><img src="img/search.png" alt="Поиск"></a></div>
-            <div class="link top cart"><a href=""><img src="img/cart.png"></a></div>
-            <div class="link top cart text"><a href="">Корзина: пока пусто</a></div>
+    <header>
+        <nav>
+            <a href="">Каталог товаров</a>
+            <a href="">Вязание на заказ</a>
+            <a class="logo" href=""><img src="img/mishka-logo.png" alt="Главная"></a>
+            <a class="search" href="">
+                <img src="img/search.png" alt="Поиск" onmouseover="this.src='img/search-hover.png'" onmouseout="this.src='img/search.png'">
+            </a>
+            <a class="cart" href="" onmouseover="'this.cart-img.src'='img/cart-hover.png'" onmouseout="'cart-img.src'='img/cart.png'">
+                <img class="cart-img" src="img/cart.png" alt="Корзина" onmouseover="this.src='img/cart-hover.png'" onmouseout="this.src='img/cart.png'">
+                Корзина: пока пусто
+            </a>
         </nav>
-        <header class="header">
-           <nav class="header-menu">
-               <div class="link menu new"><a href="">Новые поступления</a></div>
-               <div class="link menu sale"><a href="">Распродажа</a></div>
-               <div class="menu info">Бесплатная доставка по России</div>
-           </nav>
-           <div class="header-main">
-               <div class="main-text">Милые штуки ручной<br>работы для дома</div>
-           </div>
-           <footer class="header-footer">
-               <button class="left-btn">
-                   <div>Предметы<br>интерьера</div>
-                   <img src="img/left-logo-btn.png">
-               </button>
-               <button class="right-btn">
-                   <div>Детские<br>игрушки</div>
-                   <img src="img/right-logo-btn.png">
-               </button>
-           </footer>
-           <footer class="zigzag"></footer>
-        </header>
+    </header>
+
+
+
+
+
+
+    
+    <main>
+        <div class="header">
+            <nav class="header-menu">
+                <div class="link menu new"><a href="">Новые поступления</a></div>
+                <div class="link menu sale"><a href="">Распродажа</a></div>
+                <div class="menu info">Бесплатная доставка по России</div>
+            </nav>
+            <div class="header-main">
+                <div class="main-text">Милые штуки ручной<br>работы для дома</div>
+            </div>
+            <footer class="header-footer">
+                <button class="left-btn">
+                    <div>Предметы<br>интерьера</div>
+                    <img src="img/left-logo-btn.png">
+                </button>
+                <button class="right-btn">
+                    <div>Детские<br>игрушки</div>
+                    <img src="img/right-logo-btn.png">
+                </button>
+            </footer>
+            <footer class="zigzag"></footer>
+        </div>
         <article class="featured">
             <main class="featured-main">
                 <article class="article product-week">ТОВАР<br>НЕДЕЛИ</article>
@@ -95,10 +111,10 @@
                 </table>
             </section>
             <section class="about-us feedback">
-                <header>
+                <div>
                     <h1>Отзывы</h1>
                     <button class="all-btn">НАПИСАТЬ</button>
-                </header>
+                </div>
                 <main>
                     <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
                         <br>как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
@@ -120,14 +136,22 @@
                 <h1>Контакты</h1>
                 <table>
                     <tr>
-                        <td class="col1"><p>e-mail:</p></td>
-                        <td><a href=""><p></p>info@mimimishkashop.ru</p></a></td>
+                        <td class="col1">
+                            <p>e-mail:</p>
+                        </td>
+                        <td><a href="">
+                                <p></p>info@mimimishkashop.ru</p>
+                            </a></td>
                     </tr>
                     <tr>
-                        <td class="col1"><p>адрес:</p></td>
-                        <td><p>г. Санкт-Петербург<br>
-                            ул. Большая Конюшенная,<br>
-                            д. 19/8, офис 101</p></td>
+                        <td class="col1">
+                            <p>адрес:</p>
+                        </td>
+                        <td>
+                            <p>г. Санкт-Петербург<br>
+                                ул. Большая Конюшенная,<br>
+                                д. 19/8, офис 101</p>
+                        </td>
                     </tr>
                 </table>
                 <button class="all-btn">НАПИШИТЕ НАМ</button>
@@ -135,16 +159,17 @@
             <img class="map" src="img/map-desktop@1x.png">
             <img class="map-pin" src="img/map-pin.png">
         </section>
-        <footer class="footer">
-            <div class="logo"><img src="img/logo-text.png"></div>
-            <div class="ig"><img src="img/insta.png"></div>
-            <div class="fb"><img src="img/fb.png"></div>
-            <div class="tw"><img src="img/twitter.png"></div>
-            <div class="by">
-                <div>Разработано</div>
-                <img class="" src="img/htmlacademy.png">
-            </div>
-        </footer>
     </main>
+    <footer class="footer">
+        <div class="logo"><img src="img/logo-text.png"></div>
+        <div class="ig"><img src="img/insta.png"></div>
+        <div class="fb"><img src="img/fb.png"></div>
+        <div class="tw"><img src="img/twitter.png"></div>
+        <div class="by">
+            <div>Разработано</div>
+            <img class="" src="img/htmlacademy.png">
+        </div>
+    </footer>
 </body>
+
 </html>
