@@ -27,6 +27,7 @@ a:active{
     opacity: 0.3;
 }
 p{
+    display: block;
     font-size: 17px;
     color: #5c5252;
     margin: 0;
@@ -55,8 +56,7 @@ button:active{
 nav,header, 
 main .main-info .menu,
 .product,
-
-.header,.featured,.about,.contacts,.footer{
+.about-us.feedback div{
     display: flex;    
     align-items: center;
     justify-content: space-between;
@@ -64,7 +64,8 @@ main .main-info .menu,
     flex-shrink: 0;
 }
 main section.main-info,
-.product  .product-info{
+.product .product-info,
+.about-us.feedback{
     display: flex;    
     flex-grow: 0;
     flex-shrink: 0;
@@ -219,6 +220,7 @@ button.right-btn::before{
     content: "Детские игрушки";
 }
 
+
 /* ----------product---------- */
 
 .product{
@@ -230,11 +232,6 @@ button.right-btn::before{
     background-image: url("img/triple-set-desktop.png");
     background-repeat: no-repeat;
     background-position: 100% 37%;
-}
-.product::after{
-    content: url("img/zigzag-line-desktop.png");
-    bottom: 0;
-    position: absolute;
 }
 .product .product-week{
     font-size: 17px;
@@ -278,68 +275,80 @@ button.right-btn::before{
     width: 290px;
 }
 
-/* ----------about---------- */
+.product::after,
+.about::after{
+    content: url("img/zigzag-line-desktop.png");
+    bottom: 0;
+    position: absolute;
+}
 
+
+/* ----------about---------- */
+/* _____about-us_____ */
 .about{
-    height: 1210px;
+    height: 1165px;
     flex-direction:column;
     align-items: stretch;
+    position: relative;
 }
 .about-us{
     padding: 0 0 0 170px;
 }
-.about-us.short,.about-us.feedback{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 .about-us.short{
-    height: 625px;
-}
-.about-us.feedback{
-    height: 560px;
-}
-.row-img{
-    height: 55px;
-}
-.row-data{
-    height: 100px;
-    vertical-align: top;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.1;
+    height: 615px;
 }
 .about-us.short h1{
     margin:50px 0 0 0;
 }
 .about-us.short table{
-    margin: 45px 0 0 0;
+    margin: 40px 0 0 0;
 }
-.about-us.short table .col1{
+.about-us.short table td{
     width: 350px;
 }
-.about-us.feedback header,
-.about-us.feedback footer,
-.about-us.feedback footer div{
-    display: flex;
-    justify-content: space-between;
+.about-us.short table tr{
+    height: 155px;
+    vertical-align: top;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
 }
-.about-us.feedback header{
-    margin: 90px 0 0 0;
-    flex-grow: 0.8;
+.about-us.short table td::before{
+    display: block;
+    height: 50px;
+}
+.about-us.short table .item1::before{
+    content: url("img/icon-1.png");
+}
+.about-us.short table .item2::before{
+    content: url("img/icon-2.png");
+}
+.about-us.short table .item3::before{
+    content: url("img/icon-3.png");
+}
+.about-us.short table .item4::before{
+    content: url("img/icon-4.png");
+}
+.about-us.short table .item5::before{
+    content: url("img/icon-5.png");
+}
+.about-us.short table .item6::before{
+    content: url("img/icon-6.png");
+}
+
+/* _____feedback_____ */
+.about-us.feedback{
+    height: 560px;
+    justify-content: flex-start;
+    background-image: url("img/feedback.png");
+    background-repeat: no-repeat;
 }
 .about-us.feedback h1{
     margin: 0;
 }
 .about-us.feedback button{
     width: 175px;
-    margin: 19px -5px 0 0;
-}
-.about-us.feedback{
-    background-image: url("img/feedback.png");
-    background-repeat: no-repeat;
-    background-position: 0% 35%;
-    margin: 15px 5px 0 0;
+    margin: 15px 0 0 0;
 }
 .about-us.feedback .arrow{
     width: 90px;
@@ -349,20 +358,28 @@ button.right-btn::before{
     background-position: 50% -2%;
     background-color: white;
 }
+.about-us.feedback .arrow:hover{
+    opacity: 0.6;
+}
+.about-us.feedback .arrow:active{
+    opacity: 0.3;
+}
 .arrow.left{
     background-image: url("img/arrow-left.png")
 }
 .arrow.right{
     background-image: url("img/arrow-right.png")
 }
-.about-us.feedback footer{
-    flex-grow: 2.5;
-    margin: 0 0 0 5px;
+.about-us.feedback p{
+    width: 900px;
+    flex-grow: 0.09;
 }
-.about-us.feedback main{
-    flex-grow: 0.6;
-    margin: 0 0 0 5px;
+.about-us.feedback .feedback-name{
+    flex-grow: 0.3;
+    padding: 10px 0 0 0;
 }
+
+
 .contacts{
     flex-basis: 670px;
     align-items: flex-start;
