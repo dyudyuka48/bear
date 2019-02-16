@@ -11,6 +11,7 @@ h1{
     font-size: 53px;
     font-weight: bold;
     text-align: left;
+    display: block;
 }
 a{
     display: block;
@@ -26,6 +27,7 @@ a:active{
     opacity: 0.3;
 }
 nav,header, 
+main .main-info .menu,
 .header,.featured,.about,.contacts,.footer{
     display: flex;    
     align-items: center;
@@ -33,6 +35,15 @@ nav,header,
     flex-grow: 0;
     flex-shrink: 0;
 }
+main section.main-info{
+    display: flex;    
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* <<<<<----------header---------->>>>> */
 header{
     font-size: 17px; 
     height: 90px;
@@ -80,73 +91,110 @@ header a.cart:hover .cart-img{
 
 
 
+/* <<<<<----------main---------->>>>> */
 
-
-
-
-
-
-
-
-/* header */
-.header{
-    flex-direction: column;
-    align-items: stretch;
-    background-image: url("img/hero-desktop.png") ;
-}
-.header-menu{
-    display: flex;
-    flex-basis: 60px;
-    align-items: center;
-    justify-content: space-between;
-}
-.header-menu div{
-    font-size: 15px;
-}
-div.info{
+/* ----------main-info---------- */
+main .main-info{
+    height: 760px;
     color: #444444;
+    position: relative;
+    background-image: url("img/hero-desktop.jpg") ;
 }
-.header-menu .link.menu.new{flex-grow: 1}
-.header-menu .link.menu.sale{flex-grow: 8}
-.header-menu .menu.info{flex-grow: 0}
-
-.header-main{ 
-    flex-basis: 565px;
+main .main-info::after{
+    content: url("img/zigzag-fill.png");
+    position: absolute;
+    bottom: 0;
+    height: 34px;
 }
-.header-main .main-text{
-    font-size: 53px;
-    font-weight: bold;
+main .main-info .menu{
+    font-size: 15px;
+    height: 60px;
+}
+main .main-info .menu nav a{
+    margin-right: 60px;
+}
+main .main-info .menu div{
+    width: 232px;
+}
+main .main-info h1{
     text-align: center;
-    margin: 93px 0 0 0;
-    line-height: 58px;
+    flex-grow: 1;
+    margin: 95px;
+    line-height: 1.1;
 }
-.header-footer{
+/* buttons */
+.green-buttons{
     display: flex;
     align-items: stretch;
     flex-basis: 120px;
+    padding-bottom: 15px;
 }
-button.left-btn,button.right-btn{
+.green-btn{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     width: 50%;
     border: 0px;
-    color:white;
+    background-position: center right;
+    position: relative;
+    height: 120px;
+    padding: 0;
+}
+.green-btn::after{
+    opacity:0.5;
+    position: absolute;
+    right: 35px;
+    top: 30px;
+    background-repeat: no-repeat;
+}
+.green-btn::before{
+    width:120px;
     font-size: 22px;
+    color:white;
     font-weight: bold;
-    padding: 35px;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    line-height: 1.35;
+    text-align: left;
+}
+.green-btn:hover:after{
+    opacity: 0.7;
+}
+.green-btn:active:after,
+.green-btn:active:before{
+    opacity: 0.3;
 }
 button.left-btn{
-    background-image: url("img/left-green-btn.png");
+    background-color: #63d1bb;
+}
+button.left-btn:hover{
+    background-color: #59d5bc;
+}
+button.left-btn::after{
+    content: url("img/left-logo-btn.png");
+}
+button.left-btn::before{
+    content: "Предметы интерьера";
 }
 button.right-btn{
-    background-image: url("img/right-green-btn.png");
+    background-color: #56c3b2;
 }
-.zigzag{
-    flex-basis: 15px;
-    background-image: url("img/zigzag-fill.png");
-    z-index: 1000;
+button.right-btn:hover{
+    background-color: #46c1ae;
 }
+button.right-btn::after{
+    content: url("img/right-logo-btn.png");
+}
+button.right-btn::before{
+    content: "Детские игрушки";
+}
+
+
+
+
+
+
 /* featured */
 .featured{
     flex-basis: 790px;
