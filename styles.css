@@ -26,6 +26,20 @@ a:hover{
 a:active{
     opacity: 0.3;
 }
+a.mail{
+    color: #444444;
+    font-size: 17px;
+    text-decoration-color: #62d1ba;
+    font-weight: normal;
+    text-decoration-line: underline;
+}
+a.mail:hover{
+    text-decoration-color: #46c1ae;
+    color: #46c1ae;
+}
+a.mail:active{
+    opacity: 0.3;
+}
 p{
     display: block;
     font-size: 17px;
@@ -56,7 +70,8 @@ button:active{
 nav,header, 
 main .main-info .menu,
 .product,
-.about-us.feedback div{
+.about-us.feedback div,
+.contacts{
     display: flex;    
     align-items: center;
     justify-content: space-between;
@@ -371,7 +386,7 @@ button.right-btn::before{
     background-image: url("img/arrow-right.png")
 }
 .about-us.feedback p{
-    width: 900px;
+    width: 770px;
     flex-grow: 0.09;
 }
 .about-us.feedback .feedback-name{
@@ -380,14 +395,18 @@ button.right-btn::before{
 }
 
 
+/* ----------contacts---------- */
 .contacts{
     flex-basis: 670px;
     align-items: flex-start;
 
 }
-.map{
-    width: 525px;
-    margin: 70px 0 0 0;
+.flag{
+    width: 165px;
+    height: 800px;
+    background-image: url(img/flag.png);
+    background-repeat: no-repeat;
+    background-position: 53% 18%;
 }
 .contact-values{
     width: 350px;
@@ -395,38 +414,44 @@ button.right-btn::before{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 80px 0 0 50px;
+    margin: 75px 0 0 0;
     height: 445px;
 }
-.contact-values button{
-    width: 230px;
-    flex-grow: 0;
-    margin: 0 5px;
-}
-.map-pin{
-    position: absolute;
-    left: 1070px;
-    top: 3065;
-}
-.flag{
-    margin: 130px 0 0 65px;
+.contact-values h1{
+    margin: 53px 0 0 0;
 }
 .contact-values table{
-    flex-grow: 10;
-}
-.contact-values h1{
-    flex-grow: 0;
-    margin: 53px 0 0 0;
+    height: 255px;
 }
 .contact-values .col1{
     width: 80px;
 }
-.contact-values a{    
-    font-size: 17px;
-    color: #5c5252;
-    margin: 0;
-    line-height: 1.8;
+.contact-values .row2{
+    vertical-align: top;
 }
+.contact-values td{
+    padding: 0;
+}
+.contact-values button{
+    width: 230px;
+    margin: 0 5px;
+}
+#map{
+    width: 525px;
+    margin: 65px 0 0 0;
+    position: relative;
+}
+#map::after{
+    content: url("img/map-pin.png");
+    position: absolute;
+    left: 45%;
+    top: 30%;
+}
+
+
+
+
+
 .footer{
     height: 60px;
     margin: 10px 0 0 0;
