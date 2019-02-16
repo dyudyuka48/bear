@@ -67,11 +67,13 @@ button:active{
    color: #8d8d8d;
 }
 
-nav,header, 
+nav,
+header, 
 main .main-info .menu,
 .product,
 .about-us.feedback div,
-.contacts{
+.contacts,
+footer{
     display: flex;    
     align-items: center;
     justify-content: space-between;
@@ -184,6 +186,9 @@ main .main-info h1{
     position: relative;
     height: 120px;
     padding: 0;
+}
+.green-btn:hover{
+    transform: scale(1, 1.05);
 }
 .green-btn::after{
     opacity:0.5;
@@ -397,16 +402,16 @@ button.right-btn::before{
 
 /* ----------contacts---------- */
 .contacts{
-    flex-basis: 670px;
+    height: 654px;
     align-items: flex-start;
 
 }
 .flag{
     width: 165px;
-    height: 800px;
+    height: 400px;
     background-image: url(img/flag.png);
     background-repeat: no-repeat;
-    background-position: 53% 18%;
+    background-position: 53% 40%;
 }
 .contact-values{
     width: 350px;
@@ -451,29 +456,73 @@ button.right-btn::before{
 
 
 
+/* <<<<<----------footer---------->>>>> */
 
-.footer{
+footer{
     height: 60px;
     margin: 10px 0 0 0;
+    background-color: #f1f1f1;
 }
-.footer .logo{
-    flex-grow: 2;
-    height: 100%;
+footer .logo{
+    flex-grow: 1;
+    width: 105px;
+    height: 35px;
+    background-image: url("img/logo-text.png");
+    background-repeat: no-repeat;
 }
-.footer .ig{
-    flex-grow: 0.25;
+footer .logo:hover{
+    background-image: url("img/logo-text-hover.png");
 }
-.footer .fb{
-    flex-grow: 0.25;
-}
-.footer .tw{
-    flex-grow: 1.8;
-}
-.footer .by{
-    flex-grow: 0;
+footer .social{
+    flex-grow: 1;
     display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+footer .social a{
+    flex-grow: 0.11;
+}
+footer .ig{
+    width: 22px;
+    height: 21px;
+    background-image: url("img/insta.png");
+    background-repeat: no-repeat;
+}
+footer .ig:hover{
+    background-image: url("img/insta-hover.png");
+}
+footer .fb{
+    width: 15px;
+    height: 28px;
+    background-image: url("img/fb.png");
+    background-repeat: no-repeat;
+}
+footer .fb:hover{
+    background-image: url("img/fb-hover.png");
+}
+footer .tw{
+    width: 23px;
+    height: 20px;
+    background-image: url("img/twitter.png");
+    background-repeat: no-repeat;
+}
+footer .tw:hover{
+    background-image: url("img/twitter-hover.png");
+}
+footer .by{
+    flex-grow: 0;
     font-size: 19px;
-    font-weight: bold;
-    width: 185px;
-    justify-content: space-between;
+    width: 185px;    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer .by::after{
+    content: url("img/htmlacademy.png");
+    float: right;
+    margin: 20px 0 0 0;
+    padding: 0 0 0 30px;
+}
+footer .by::after:hover{
+    content: url("img/htmlacademy-hover.png");
 }
