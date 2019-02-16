@@ -12,16 +12,16 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="main-menu">
             <a href="">Каталог товаров</a>
             <a href="">Вязание на заказ</a>
-            <a class="logo" href=""><img src="img/mishka-logo.png" alt="Главная"></a>
-            <a class="search" href="">
-                <img src="img/search.png" alt="Поиск" onmouseover="this.src='img/search-hover.png'" onmouseout="this.src='img/search.png'">
-            </a>
-            <a class="cart" href="" onmouseover="'this.cart-img.src'='img/cart-hover.png'" onmouseout="'cart-img.src'='img/cart.png'">
-                <img class="cart-img" src="img/cart.png" alt="Корзина" onmouseover="this.src='img/cart-hover.png'" onmouseout="this.src='img/cart.png'">
-                Корзина: пока пусто
+        </nav>
+        <a class="logo header-img" href="" title="Главная"></a>
+        <nav class="right-header">
+            <a class="search header-img" href=""></a>
+            <a class="cart" href="">
+                <i class="cart-img header-img"></i>
+                <span>Корзина: пока пуста</span>
             </a>
         </nav>
     </header>
@@ -31,7 +31,8 @@
 
 
 
-    
+
+
     <main>
         <div class="header">
             <nav class="header-menu">

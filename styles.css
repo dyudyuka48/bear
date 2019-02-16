@@ -7,14 +7,6 @@ html,body{
     width : 1050px;
     flex-direction: column;
 }
-nav,.header,.featured,.about,.contacts,.footer{
-    display: flex;    
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
 h1{
     font-size: 53px;
     font-weight: bold;
@@ -25,17 +17,7 @@ a{
     color: black;
     font-weight: bold;
     text-decoration: none;
-}
-header nav{
-    font-size: 17px; 
-    height: 90px;
- }
-header nav a {flex-grow: 1}
-header nav a.logo {vertical-align: middle; flex-grow: 1.8}
-header nav a.search {flex-grow: 0.9}
-header nav a.cart {flex-grow: 0}
-header nav a.cart img {
-    margin: 0 30px 0 0
+    flex-grow: 1;
 }
 a:hover{
     opacity: 0.6;
@@ -43,7 +25,58 @@ a:hover{
 a:active{
     opacity: 0.3;
 }
-
+nav,header, 
+.header,.featured,.about,.contacts,.footer{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+header{
+    font-size: 17px; 
+    height: 90px;
+ }
+header nav{
+    width: 450px;
+}
+.header-img{
+    height: 90px;
+}
+header a.logo{
+    width: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("img/mishka-logo.png");
+}
+header a.search {
+    flex-grow: 0;
+    width: 150px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url("img/search.png");
+}
+header .cart-img{
+    display: inline-block;
+    width: 21px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url("img/cart.png");
+}
+header a.cart{
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+}
+header a.cart span {
+    margin-left: 32px;
+}
+header a.search:hover{
+    background-image: url("img/search-hover.png");
+}
+header a.cart:hover .cart-img{
+    background-image: url("img/cart-hover.png");
+}
 
 
 
