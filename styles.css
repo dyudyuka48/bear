@@ -1,11 +1,16 @@
-html,body{
+html{
     font-family: "Open Sans", 'Times New Roman', Times, serif;
     height: 100%;
-    padding: 0;
+    /* padding: 0 100px; */
     margin: auto;
     display: flex;
-    width : 1050px;
+    width : 1250px;
     flex-direction: column;
+    box-sizing:border-box;
+}
+body{
+    margin: 0;
+    padding: 0 50px; 
 }
 h1{
     font-size: 53px;
@@ -89,53 +94,66 @@ main section.main-info,
     flex-direction: column;
     justify-content: space-between;
 }
+header, main, footer{
+    padding: 0 50px;
+}
 
 /* <<<<<----------header---------->>>>> */
 header{
     font-size: 17px; 
     height: 90px;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
  }
-header nav{
-    width: 450px;
-}
-.header-img{
-    height: 90px;
-}
-header a.logo{
-    width: 150px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("img/mishka-logo.png");
-}
-header a.search {
-    flex-grow: 0;
-    width: 150px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-image: url("img/search.png");
-}
-header .cart-img{
-    display: inline-block;
-    width: 21px;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-image: url("img/cart.png");
-}
 header a.cart{
     flex-grow: 0;
+}
+header a.catalog{
+    width: 185px;
+    border-right: 1px solid #ececec;
+}
+header a.order{
+    padding-left: 35px;
+}
+header a.logo{
+    height: 90px;
+    width: 150px;
+    background-image: url("img/mishka-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0%;
+    left: 43.5%;
+}
+header a.search{
+    background-image: url("img/search.png");
+    height: 90px;
+    width: 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 0;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    position: absolute;
+    left: 65%;
+}
+header a.search:hover{
+    background-image: url("img/search-hover.png")
+}
+header a.cart::before{
+    content: url("img/cart.png");
+    margin-right: 30px;
+}
+header a.cart:hover:before{
+    content: url("img/cart-hover.png");
+
+}
+header nav{height: 100%;}
+header nav a{
+    height: 100%;
     display: flex;
     align-items: center;
 }
-header a.cart span {
-    margin-left: 32px;
-}
-header a.search:hover{
-    background-image: url("img/search-hover.png");
-}
-header a.cart:hover .cart-img{
-    background-image: url("img/cart-hover.png");
-}
-
 
 
 /* <<<<<----------main---------->>>>> */
