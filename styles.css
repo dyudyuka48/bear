@@ -1,7 +1,6 @@
 html{
     font-family: "Open Sans", 'Times New Roman', Times, serif;
     height: 100%;
-    /* padding: 0 100px; */
     margin: auto;
     display: flex;
     width : 1250px;
@@ -204,6 +203,7 @@ main .main-info h1{
     position: relative;
     height: 120px;
     padding: 0;
+    text-transform: none;
 }
 .green-btn:hover{
     transform: scale(1, 1.05);
@@ -543,4 +543,131 @@ footer .by::after{
 }
 footer .by::after:hover{
     content: url("img/htmlacademy-hover.png");
+}
+
+
+@media screen and (min-width:1250px) {
+    .mobile, .tablet{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    html {
+        width : 768px;
+    }
+    .desctop, .mobile
+    {
+        display: none;
+    }
+    body{
+        padding: 0;
+    }
+    header{
+        justify-content: flex-end
+    }
+    header a.logo{
+        background-image: url("img/mishka-logo-tablet.png");
+        margin-left: 50px;
+        left: 0%;
+        height: 46px;
+        width: 113px;
+        top: 30%;
+    }
+    header a.search
+    {
+        left: 48%;
+    }
+    main .main-info .menu nav a.catalog{
+        margin-right: 35px;
+    }
+    h1{
+        font-size: 43px;
+    }
+    main .main-info h1{    
+        margin: 95px 0;
+    }
+    main .main-info{   
+        background-position: top;
+        background-size: 950px 750px;
+    }
+    main .main-info::after{
+        left: -2%;
+        content: url(img/zigzag-fill-tablet.png);
+        height: 30px;
+    }
+}
+
+
+@media screen and (max-width:320px) {
+    html {
+        width : 320px;
+    }
+    .desctop, .tablet, .desctop-tablet
+    {
+        display: none;
+    }
+    header a.logo{
+        background-image: url("img/mishka-logo-mobile.png");
+        margin: 0;
+        height: 35px;
+        width: 86px;
+        left: 36%;
+        top: 25%;
+    }
+    header .mobile-menu{
+        background-image: url("img/mobile-menu.png");
+        height: 14px;
+        width: 20px;
+        display: block;
+        position: absolute;
+        top: 35%;
+        right: 10%;
+    }
+    main{
+        padding: 0;
+    }
+   body{
+        padding: 0;
+    }
+    header{
+        justify-content: flex-end;
+        padding: 0;
+    }
+    h1{
+        font-size: 27px;
+    }
+    main .main-info h1{    
+        margin: 0 30px;
+    }
+    main .main-info{   
+        background-position: top;
+        background-size: 950px 750px;
+    }
+    main .main-info{
+        height: 495px;
+        background-image: url("img/hero-mobile.png") ;
+        background-size: 320px 300px;
+        background-repeat: no-repeat;
+    }
+    .green-buttons{
+        flex-direction: column;
+        flex-basis: 210px;
+    }
+    .green-btn{
+        width: 100%;
+    }
+    main .main-info::after{
+        display: none;
+    }
+    .green-btn::before {
+        font-size: 19px;
+        left: 30px;
+        top: 25px;
+    }
+    .green-btn::after {
+        right: 30px;
+        top: 25px;
+    }
 }
