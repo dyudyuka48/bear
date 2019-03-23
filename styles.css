@@ -557,7 +557,7 @@ footer .by::after:hover{
     html {
         width : 768px;
     }
-    .desctop, .mobile
+    .desctop, .mobile, .desctop-mobile
     {
         display: none;
     }
@@ -689,10 +689,7 @@ footer .by::after:hover{
         width: 768px;
     }
     #map::after{
-        content: url("img/map-pin.png");
-        position: absolute;
         left: 47%;
-        top: 30%;
     }
     .contact-values tr{
         vertical-align: top;
@@ -746,10 +743,14 @@ footer .by::after:hover{
         padding: 0;
     }
     h1{
-        font-size: 27px;
+        font-size: 25px;
+    }
+    p{
+        font-size: 15px;
     }
     main .main-info h1{    
         margin: 0 30px;
+        font-size: 27px;
     }
     main .main-info{   
         background-position: top;
@@ -779,5 +780,181 @@ footer .by::after:hover{
     .green-btn::after {
         right: 30px;
         top: 25px;
+    }
+    .product {
+        height: 830px;
+        background-image: url("img/triple-set-mobile.png");
+        background-position: 50% 63%;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+    .product .product-info h1{
+        margin-top: 7px;
+        margin-left: 1px;
+        flex-grow: 1;
+    }
+    .product .product-info{
+        height: 765px;
+    }
+    .product .product-week.mobile {
+        text-align: left;
+        width: 260px;
+        padding-top: 0;
+        display: block;
+        flex-grow: 4;
+    }
+    .product .product-info p{
+        flex-grow: 0;
+        padding: 10px 0;
+    }
+    .product .product-info table{
+        flex-grow: 1;
+        margin-bottom: 360px;
+    }
+    .product .product-info h2{
+        flex-grow: 0.06;
+        font-size: 17px;
+        margin: 0;
+        text-align: center;
+        width: 260px;
+        padding-bottom: 30px;
+    }
+    .product .product-info button{
+        flex-grow: 0;
+        width: 260px;
+        margin: 0;
+        text-align: center;
+    }
+    .product::after,
+    .about::after{
+        content: url("img/zigzag-line-mobile.png");
+        bottom: 17px;
+        left: 0;
+    }
+    .about .about-us.short .mobile{
+        display: table;
+        margin: 30px 0;
+    }
+    .about .about-us.short .mobile tr{
+        height: 122px;
+        font-size: 17px;
+    }
+    .about {
+        height: 1460px;
+        padding: 0 30px;
+    }
+    .about .about-us.short{
+        height: 800px;
+    }
+    .about-us.short h1 {
+        margin: 3px 0 0 0;
+    }
+    .about-us.feedback{
+        background: none;
+        justify-content: space-between;
+        height: 605px;
+    }
+    .about-us.feedback .feedback-name{
+        flex-direction: column;
+        width: 260px;
+        align-items: initial;
+        margin-top: 5px;
+    }
+    .about-us.feedback div{
+        flex-direction: column;
+    }
+    .about-us.feedback .mobile{
+        display: block;
+        width: 260px;
+    }
+    .contacts .mobile{
+        display: block;
+        width: 320px;
+    }
+    .about-us.feedback p{
+        width: 260px;
+        flex-grow: 0.3;
+    }
+    .about-us.feedback div p{
+        margin-bottom: 10px;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+    .about-us.feedback .arrows{
+        flex-direction: row;
+        width: 220px;
+        flex-grow: 0;
+    }
+    .contact-values {
+        margin: 0;
+        height: 210px;
+        width: 260px;
+        justify-content: start;
+    }
+    #map {
+        width: 320px;
+    }
+    .contacts .contact-values .row2.desctop-mobile{
+        display: table-row;
+    }
+    .product .product-info table td.col1{
+        width: 70px;
+    }
+    .contact-values table{
+        width: 260px;
+        margin-top: 30px;
+    }
+    .contact-values h1{
+        margin-top: 35px;
+        font-size: 18px;
+    }
+    a.mail{
+        font-size: 15px;
+    }
+    .contact-values tr {
+        height: 60px;
+    }
+    .contact-values .row2 {
+        height: 60px;
+    }
+    #map::after {
+        left: 43%;
+    }
+    .contacts .write {
+        width: 260px;
+        margin-bottom: 45px;
+    }
+    .contacts {
+        height: 900px;
+    }
+    footer {
+        height: 160px;
+        display: inline-block;
+        padding: 0;
+    }
+    footer .social{
+        width: 320px;
+        height: 80px;
+        margin: 0;
+        justify-content: center;
+    }
+    footer .social a {
+        height: 55px;
+    }
+    footer .by{
+        height: 40px;
+        margin-left: 65px;
+    }
+    footer .social a.ig{
+        flex-grow: 0.16;
+    }
+    footer .social a.fb{
+        flex-grow: 0.16;
+    }
+    footer .social a.tw{
+        flex-grow: 0;
+    }
+    footer .by::after{
+        margin-top: 10px;
     }
 }
