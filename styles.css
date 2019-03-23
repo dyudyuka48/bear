@@ -547,7 +547,7 @@ footer .by::after:hover{
 
 
 @media screen and (min-width:1250px) {
-    .mobile, .tablet{
+    .mobile, .tablet, .tablet-mobile{
         display: none;
     }
 }
@@ -596,6 +596,116 @@ footer .by::after:hover{
         left: -2%;
         content: url(img/zigzag-fill-tablet.png);
         height: 30px;
+    }
+    .product .product-week{
+        width: 70px;
+        padding-top: 40px;
+        text-transform: uppercase;
+        line-height: 1.1;
+    }
+    .product .product-info{
+        width: 570px;
+        height: 540px;
+        padding: 0;
+    }
+    .product .product-info h1 {
+        margin: 22px 0 0 -5px;
+    }
+    .product .product-info table{
+        margin: 0;
+        flex-grow: 100;
+    }
+    .product{
+        height: 625px; 
+        background-image: url("img/triple-set-tablet.png");
+        background-position: 100% 60%;
+    }
+    .product::after,
+    .about::after{
+        content: url("img/zigzag-line-tablet.png");
+        left: -50px;
+        bottom: 13px;
+    }
+    .about::after{
+        bottom: 20px;
+    }
+    .about-us {
+        padding: 0;
+    }
+    .about-us.short h1{
+        margin: 25px 0 0 0;
+    }
+    .about-us.short table{
+        margin: 45px 0 0 0;
+    }
+    .about-us.short{
+        height: 600px;
+    }
+    .about-us.feedback{
+        margin: 0 0 0 -50px;
+        padding: 0 0 0 50px;
+    }
+    .about-us.feedback p{
+        width: 610px;
+    }
+    .about-us.feedback div{
+        flex-grow: 0.2;
+    }
+    .about-us.feedback .feedback-name{
+        padding: 20px 0 0 0;
+    }
+    .about-us.feedback button{
+        margin: 20px 0 0 0;
+    }
+    .contacts{
+        flex-direction: column;
+        height: 930px;
+        align-items: center;
+    }
+    .flag {
+        position: absolute;
+        float: right;
+        background-position: 100% 100%;
+        width: 668px;
+        height: 100px;
+    }
+    .contact-values{
+        margin: 30px 0 0 0;
+        height: 140px;
+        width: 668px;
+    }
+    .contact-values h1{
+        margin: 0;
+    }
+    .contact-values table{
+        width: 668px;
+        height: 90px;
+        margin-top: 45px;
+    }
+    #map-img{
+        src: url("img/map-tablet@1x.png")
+    }
+    #map {
+        width: 768px;
+    }
+    #map::after{
+        content: url("img/map-pin.png");
+        position: absolute;
+        left: 47%;
+        top: 30%;
+    }
+    .contact-values tr{
+        vertical-align: top;
+    }
+    .contacts .write{
+        width: 230px;
+        margin-bottom: 85px
+    }
+    footer .social a {
+        flex-grow: 0.23;
+    }
+    footer .social a {
+        flex-grow: 0.25;
     }
 }
 
