@@ -9,13 +9,20 @@ html{
 }
 body{
     margin: 0;
-    padding: 0 50px; 
+    padding: 0 50px;
 }
 h1{
     font-size: 53px;
     font-weight: bold;
     text-align: left;
     display: block;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    float: left;
 }
 a{
     display: block;
@@ -72,13 +79,13 @@ button:active{
 }
 
 nav,
-header, 
+header,
 main .main-info .menu,
 .product,
 .about-us.feedback div,
 .contacts,
 footer{
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-grow: 0;
@@ -87,7 +94,7 @@ footer{
 main section.main-info,
 .product .product-info,
 .about-us.feedback{
-    display: flex;    
+    display: flex;
     flex-grow: 0;
     flex-shrink: 0;
     flex-direction: column;
@@ -99,7 +106,7 @@ header, main, footer{
 
 /* <<<<<----------header---------->>>>> */
 header{
-    font-size: 17px; 
+    font-size: 17px;
     height: 90px;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
@@ -162,7 +169,9 @@ main .main-info{
     height: 760px;
     color: #444444;
     position: relative;
-    background-image: url("img/hero-desktop.jpg") ;
+    background-image: url("img/hero-desktop.png");
+    padding: 0 50px;
+    margin: 0 -50px;
 }
 main .main-info::after{
     content: url("img/zigzag-fill.png");
@@ -206,7 +215,8 @@ main .main-info h1{
     text-transform: none;
 }
 .green-btn:hover{
-    transform: scale(1, 1.05);
+    height: 125px;
+    margin: -5px 0;
 }
 .green-btn::after{
     opacity:0.5;
@@ -267,9 +277,14 @@ button.right-btn::before{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background-image: url("img/triple-set-desktop.png");
-    background-repeat: no-repeat;
-    background-position: 100% 37%;
+}
+.product-img{
+    position: absolute;
+    height: 635px;
+    width: 525px;
+    right: 0;
+    top: 7%;
+    z-index: -1;
 }
 .product .product-week{
     font-size: 17px;
@@ -280,6 +295,7 @@ button.right-btn::before{
     padding-top: 125px;
     text-transform: uppercase;
     line-height: 1.1;
+    margin: 0 50px;
 }
 .product .product-info{
     width: 875px;
@@ -303,7 +319,7 @@ button.right-btn::before{
 .product .product-info table td{
     padding: 0;
 }
-.product .product-info h2{
+.product .product-info .price{
     font-size: 20px;
     color: #444444;
     font-weight: bold;
@@ -477,39 +493,43 @@ button.right-btn::before{
 /* <<<<<----------footer---------->>>>> */
 
 footer{
-    height: 60px;
+    height: 70px;
     margin: 10px 0 0 0;
     background-color: #f1f1f1;
 }
 footer .logo{
     flex-grow: 1;
+}
+footer .logo a{
     width: 105px;
     height: 35px;
     background-image: url("img/logo-text.png");
     background-repeat: no-repeat;
 }
-footer .logo:hover{
+footer .logo a:hover{
     background-image: url("img/logo-text-hover.png");
 }
 footer .social{
-    flex-grow: 1;
+    flex-grow: 0.75;
     display: flex;
     margin-top: 10px;
     align-items: center;
 }
 footer .social a{
     flex-grow: 0.11;
+    margin: 10px 20px;
 }
-footer .ig{
+footer .social .ig{
     width: 22px;
     height: 21px;
     background-image: url("img/insta.png");
     background-repeat: no-repeat;
+    margin-top: 15px;
 }
 footer .ig:hover{
     background-image: url("img/insta-hover.png");
 }
-footer .fb{
+footer .social .fb{
     width: 15px;
     height: 28px;
     background-image: url("img/fb.png");
@@ -518,42 +538,46 @@ footer .fb{
 footer .fb:hover{
     background-image: url("img/fb-hover.png");
 }
-footer .tw{
+footer .social .tw{
     width: 23px;
     height: 20px;
     background-image: url("img/twitter.png");
     background-repeat: no-repeat;
+    margin-top: 15px;
 }
 footer .tw:hover{
     background-image: url("img/twitter-hover.png");
 }
 footer .by{
     flex-grow: 0;
+}
+footer .by a{
+    /* flex-grow: 0; */
     font-size: 19px;
-    width: 185px;    
+    width: 185px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-footer .by::after{
+footer .by a::after{
     content: url("img/htmlacademy.png");
     float: right;
     margin: 20px 0 0 0;
     padding: 0 0 0 30px;
 }
-footer .by::after:hover{
+footer .by a::after:hover{
     content: url("img/htmlacademy-hover.png");
 }
 
 
-@media screen and (min-width:1250px) {
+@media screen and (min-width: 769px) {
     .mobile, .tablet, .tablet-mobile{
         display: none;
     }
 }
 
 
-@media screen and (max-width:768px) {
+@media screen and (min-width: 321px) and (max-width:768px) {
     html {
         width : 768px;
     }
@@ -585,10 +609,10 @@ footer .by::after:hover{
     h1{
         font-size: 43px;
     }
-    main .main-info h1{    
+    main .main-info h1{
         margin: 95px 0;
     }
-    main .main-info{   
+    main .main-info{
         background-position: top;
         background-size: 950px 750px;
     }
@@ -602,6 +626,7 @@ footer .by::after:hover{
         padding-top: 40px;
         text-transform: uppercase;
         line-height: 1.1;
+        margin: 0;
     }
     .product .product-info{
         width: 570px;
@@ -616,9 +641,12 @@ footer .by::after:hover{
         flex-grow: 100;
     }
     .product{
-        height: 625px; 
-        background-image: url("img/triple-set-tablet.png");
-        background-position: 100% 60%;
+        height: 625px;
+    }
+    .product-img{
+        height: 855px;
+        width: 330px;    
+        top: 22%;
     }
     .product::after,
     .about::after{
@@ -748,11 +776,11 @@ footer .by::after:hover{
     p{
         font-size: 15px;
     }
-    main .main-info h1{    
+    main .main-info h1{
         margin: 0 30px;
         font-size: 27px;
     }
-    main .main-info{   
+    main .main-info{
         background-position: top;
         background-size: 950px 750px;
     }
@@ -765,6 +793,7 @@ footer .by::after:hover{
     .green-buttons{
         flex-direction: column;
         flex-basis: 210px;
+        height: 100px;
     }
     .green-btn{
         width: 100%;
@@ -783,8 +812,6 @@ footer .by::after:hover{
     }
     .product {
         height: 830px;
-        background-image: url("img/triple-set-mobile.png");
-        background-position: 50% 63%;
         flex-direction: column;
         padding-left: 30px;
     }
@@ -795,6 +822,13 @@ footer .by::after:hover{
     }
     .product .product-info{
         height: 765px;
+        padding: 0;
+    }
+    .product-img {
+        height: 315px;
+        width: 260px;
+        right: 10%;
+        top: 39%;
     }
     .product .product-week.mobile {
         text-align: left;
@@ -802,6 +836,7 @@ footer .by::after:hover{
         padding-top: 0;
         display: block;
         flex-grow: 4;
+        margin: 0;
     }
     .product .product-info p{
         flex-grow: 0;
@@ -811,7 +846,7 @@ footer .by::after:hover{
         flex-grow: 1;
         margin-bottom: 360px;
     }
-    .product .product-info h2{
+    .product .product-info .price{
         flex-grow: 0.06;
         font-size: 17px;
         margin: 0;
@@ -830,6 +865,9 @@ footer .by::after:hover{
         content: url("img/zigzag-line-mobile.png");
         bottom: 17px;
         left: 0;
+    }
+    .about-us{
+        padding: 0;
     }
     .about .about-us.short .mobile{
         display: table;
@@ -858,7 +896,8 @@ footer .by::after:hover{
         flex-direction: column;
         width: 260px;
         align-items: initial;
-        margin-top: 5px;
+        margin-top: 15px;
+        flex-grow: 0;
     }
     .about-us.feedback div{
         flex-direction: column;
@@ -867,18 +906,25 @@ footer .by::after:hover{
         display: block;
         width: 260px;
     }
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
     .contacts .mobile{
         display: block;
         width: 320px;
     }
     .about-us.feedback p{
         width: 260px;
-        flex-grow: 0.3;
+        line-height: 2;
     }
     .about-us.feedback div p{
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         font-size: 17px;
         line-height: 1.7;
+    }
+    .about-us.feedback .arrow{
+        background-position: 50% 50%;
     }
     .about-us.feedback .arrows{
         flex-direction: row;
@@ -886,23 +932,23 @@ footer .by::after:hover{
         flex-grow: 0;
     }
     .contact-values {
-        margin: 0;
+        margin: 0 30px;
         height: 210px;
         width: 260px;
         justify-content: start;
     }
     #map {
         width: 320px;
+        margin-top: 55px;
     }
     .contacts .contact-values .row2.desctop-mobile{
         display: table-row;
     }
     .product .product-info table td.col1{
-        width: 70px;
+        width: 95px;
     }
     .contact-values table{
         width: 260px;
-        margin-top: 30px;
     }
     .contact-values h1{
         margin-top: 35px;
@@ -919,6 +965,7 @@ footer .by::after:hover{
     }
     #map::after {
         left: 43%;
+        top:32%;
     }
     .contacts .write {
         width: 260px;
