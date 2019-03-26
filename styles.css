@@ -354,39 +354,45 @@ button.right-btn::before{
 .about-us.short h1{
     margin:50px 0 0 0;
 }
-.about-us.short table{
-    margin: 40px 0 0 0;
-}
-.about-us.short table td{
-    width: 350px;
-}
-.about-us.short table tr{
-    height: 155px;
+.about-us.short .table{
     vertical-align: top;
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.1;
+    width: 100%;
+    padding: 50px 10px;
 }
-.about-us.short table td::before{
+.about-us.short .table .col1 div,
+.about-us.short .table .col2 div{
+    height: 160px;
+}
+.about-us.short .table .col1{
+    width: 39%;
+    float: left;
+}
+.about-us.short .table .col2{
+    width: 61%;
+    float: right;
+}
+.about-us.short .table td::before{
     display: block;
     height: 50px;
 }
-.about-us.short table .item1::before{
+.about-us.short .table .item1::before{
     content: url("img/icon-1.png");
 }
-.about-us.short table .item2::before{
+.about-us.short .table .item2::before{
     content: url("img/icon-2.png");
 }
-.about-us.short table .item3::before{
+.about-us.short .table .item3::before{
     content: url("img/icon-3.png");
 }
-.about-us.short table .item4::before{
+.about-us.short .table .item4::before{
     content: url("img/icon-4.png");
 }
-.about-us.short table .item5::before{
+.about-us.short .table .item5::before{
     content: url("img/icon-5.png");
 }
-.about-us.short table .item6::before{
+.about-us.short .table .item6::before{
     content: url("img/icon-6.png");
 }
 
@@ -660,6 +666,9 @@ footer .by a::after:hover{
     .about-us {
         padding: 0;
     }
+    .about-us.short .table .col2 {
+        width: 52%;
+    }
     .about-us.short h1{
         margin: 25px 0 0 0;
     }
@@ -930,6 +939,19 @@ footer .by a::after:hover{
         flex-direction: row;
         width: 220px;
         flex-grow: 0;
+    }
+    .about-us.short .table {
+        padding: 30px 0;
+    }
+    .about-us.short .table .col1 div,
+    .about-us.short .table .col2 div{
+        height: 125px;
+        font-size: 17px;
+    }
+    .about-us.short .table .col1,
+    .about-us.short .table .col2{
+        width: 100%;
+        float: none;
     }
     .contact-values {
         margin: 0 30px;
